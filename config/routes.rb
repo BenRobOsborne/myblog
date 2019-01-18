@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :blogs
   get 'simple_pages/about'
   get 'simple_pages/contact'
   get 'simple_pages/index'
