@@ -1,19 +1,24 @@
 <p id="notice"><%= notice %></p>
+<div class="container-show">
+    <div class="row">
+      <div class="col-md-2">
+      </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @blog.name %>
-</p>
+      <div class="col-md-5">
+        <h2><%= @blog.name %></h2>
+        <%= @blog.description %><br>
+        <br>
 
-<p>
-  <strong>Description:</strong>
-  <%= @blog.description %>
-</p>
+        <strong>Price:</strong>
+        <%= @blog.price %>
+      </div>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @blog.image_url %>
-</p>
+      <div class="col-md-5 picture">
+        <%= image_tag(@blog.image_url, class: "img-responsive")unless @blog.image_url.nil? %>
+      </div>
+
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>

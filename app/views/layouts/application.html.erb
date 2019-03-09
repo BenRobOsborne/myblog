@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:600" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -22,13 +22,16 @@
         <i class="fa fa-bars menu" aria-hidden="true"></i>
       </div>
       <div class="logo">
-        <%= image_tag("Logo.png", class: "img-responsive my-image", width:'50px') %>
+        <%= link_to root_path do %>
+          <%= image_tag("Logo.png", class: "img-responsive my-image", width:'50px') %>
+        <% end %>
       </div>
 
       <ul>
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "About", simple_pages_about_path %></li>
         <li><%= link_to "Contact", simple_pages_contact_path %></li>
+        <li><%= link_to "Blog", blogs_path %></li>
       </ul>
     </nav>
 
@@ -42,7 +45,8 @@
 
 
     <footer>
-      <p>&copy; Ben Osborne</p>
+      <p>&copy; LittleBlueDesign</p>
+      <p>created by Benjamin Osborne</p>
     </footer>
 
   </body>

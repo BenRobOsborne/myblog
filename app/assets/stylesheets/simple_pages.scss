@@ -1,10 +1,10 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$main-color: #21BFC4;
+$main-color: #23ABE6;
 
 h1 {
-  font-family:'Permanent Marker', cursive;
+  font-family:'Nunito', sans-serif;
   color: $main-color;
   text-align: center;
   font-size: 3em;
@@ -19,6 +19,8 @@ p {
 }
 
 html, body {
+  margin: 0;
+  padding: 0;
   height: 100%;
   position: relative;
 }
@@ -32,27 +34,23 @@ html, body {
 
 /*navi*/
 nav {
-    background-color: rgba(3, 18, 18, 0.8);
+    background-color: rgba(3, 18, 18, 0.9);
     position: fixed;
     z-index: 1;
     width:100%;
     height: auto;
-  h3  {
-    margin:0;
-    float:left;
-    padding: 25px 30px;
-    }
+
   ul {
     list-style: none;
    }
   li {
     display: inline-block;
     float: right;
-    padding: 25px 20px;
+    padding: 20px 20px;
   }
   a {
     text-transform: uppercase;
-    font-size: 1.4em;
+    font-size: 1em;
     color: $main-color;
     padding: 15px 20px;
     position: relative;
@@ -60,9 +58,9 @@ nav {
   .logo {
     display: inline-block;
     float: left;
-    padding: 15px 20px;
-    color:#fff;
+    padding: 15px 15px;
   }
+
   a:hover {
     color: #fff;
     text-decoration: none;
@@ -107,11 +105,11 @@ nav {
   .toggle {
     width: 100%;
     padding: 10px 20px;
-    background: rgba(3, 18, 18, 0.8);
+
     text-align: right;
     box-sizing: border-box;
     color: $main-color;
-    font-size: 30px;
+    font-size: 20px;
     display:none;
    }
     @media (max-width: 768px){
@@ -119,9 +117,7 @@ nav {
       {
         display:block;
       }
-      h3 {
-        display: none;
-      }
+
       ul {
         display:none;
       }
@@ -134,10 +130,13 @@ nav {
       }
     }
  }
-
+/*Home page*/
+.my-image {
+  align: middle;
+}
  /*footer*/
  footer  {
-     background: rgba(3, 18, 18, 0.8);
+     background: rgba(3, 18, 18, 0.9);
      position:relative;
      height: 5.5rem;
      margin-top: -5.5rem;

@@ -1,31 +1,30 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Blogs</h1>
+<div class="container">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.name %></td>
+    <div class="row">
+      <div class="col-sm-4">
+        <h2 class="show-h2"><%= blog.name %></h2>
         <td><%= blog.description %></td>
-        <td><%= blog.image_url %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      </div>
+      <div class="col-sm-6">
+        <%= image_tag(blog.image_url, class: "img-responsive", width: '100%') %>
+      </div>
+      <div class="col-sm-2">
+        <strong>Rating</strong><br>
+        <br>
+
+
+        <p><%= blog.price %></p>
+      </div>
+  </div>
+
+      <div class="links">
+        <%= link_to 'Show', blog %>
+        <%= link_to 'Edit', edit_blog_path(blog) %>
+        <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
     <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New Blog', new_blog_path %>
+        <%= link_to 'New Blog', new_blog_path %>
+</div>
